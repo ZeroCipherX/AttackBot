@@ -1,0 +1,68 @@
+/* Custom chat styles for Cybersecurity Assistant */
+
+body.dark-mode .chat-container {
+  background: #23272b !important;
+  color: #e0e0e0;
+}
+
+body.dark-mode .chat-header {
+  background: #181a1b !important;
+  color: #fff;
+}
+
+body.dark-mode .chat-messages {
+  background: #181a1b !important;
+}
+
+body.dark-mode .chat-messages .message-content {
+  background: #23272b !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .chat-messages .message.user .message-content {
+  background: #0d6efd !important;
+  color: #fff !important;
+}
+
+body.dark-mode .chat-messages .timestamp {
+  color: #adb5bd !important;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.typing-dots span {
+  animation: blink 1.4s infinite both;
+  opacity: 0.3;
+  margin-right: 2px;
+}
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0.3; }
+  40% { opacity: 1; }
+}
+
+.sender-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .chat-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  .chat-messages {
+    min-height: 200px;
+    max-height: 300px;
+  }
+} 
